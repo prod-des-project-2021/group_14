@@ -8,3 +8,4 @@ A = left
 S = down
 D = right
 Space = jump
+Mouse = look
