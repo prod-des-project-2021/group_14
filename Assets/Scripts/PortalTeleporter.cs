@@ -11,7 +11,7 @@ public class PortalTeleporter : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (playerIsOverlapping)
         {
