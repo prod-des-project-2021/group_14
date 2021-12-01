@@ -15,3 +15,5 @@ D = right
 Space = jump
 
 Mouse = look
+
+Scroll = zoom
