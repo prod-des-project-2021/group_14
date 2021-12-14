@@ -5,6 +5,15 @@ using UnityEngine;
 [RequireComponent(typeof(CameraMove))]
 public class PortalPlacement : MonoBehaviour
 {
+
+    [SerializeField] 
+    
+    AudioSource fire1Sound;
+
+    [SerializeField] 
+    
+    AudioSource fire2Sound;
+
     [SerializeField]
     private PortalPair portals;
 
@@ -26,10 +35,12 @@ public class PortalPlacement : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             FirePortal(0, transform.position, transform.forward, 250.0f);
+            fire1Sound.Play();
         }
         else if (Input.GetButtonDown("Fire2"))
         {
             FirePortal(1, transform.position, transform.forward, 250.0f);
+            fire2Sound.Play();
         }
     }
 
