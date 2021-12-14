@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     public float rotation;
     [SerializeField] float movementSpeed = 5f;
     [SerializeField] float jumpForce = 5f;
+    //[SerializeField] float booster = 5f;
     [SerializeField] Transform groundCheck;
     [SerializeField] LayerMask ground;
     [SerializeField] AudioSource jumpSound;
@@ -71,8 +72,20 @@ public class PlayerMovement : MonoBehaviour
             rb = collision.gameObject.GetComponent<Rigidbody>();
             rb.angularVelocity = Vector3.zero;
         }
+        /*if (collision.gameObject.CompareTag("Booster"))
+        {
+            GetComponent<PlayerMovement>().movementSpeed = GetComponent<PlayerMovement>().movementSpeed + booster;
+        }*/
         
     }
+
+    /*private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Booster"))
+        {
+            GetComponent<PlayerMovement>().movementSpeed = GetComponent<PlayerMovement>().movementSpeed - booster;
+        }
+    }*/
 
     bool isGrounded()
     {
