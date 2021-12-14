@@ -35,12 +35,11 @@ public class PortalPlacement : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             FirePortal(0, transform.position, transform.forward, 250.0f);
-            fire1Sound.Play();
+            
         }
         else if (Input.GetButtonDown("Fire2"))
         {
             FirePortal(1, transform.position, transform.forward, 250.0f);
-            fire2Sound.Play();
         }
     }
 
@@ -104,6 +103,7 @@ public class PortalPlacement : MonoBehaviour
             if(wasPlaced)
             {
                 crosshair.SetPortalPlaced(portalID, true);
+                fire1Sound.Play();
             }
         }
     }
