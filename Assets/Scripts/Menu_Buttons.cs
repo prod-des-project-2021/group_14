@@ -32,7 +32,7 @@ public class Menu_Buttons : MonoBehaviour
     {
     if(Input.GetKeyDown(KeyCode.Escape))
         {
-            MenuPanel.SetActive(!MenuPanel.gameObject.activeSelf);
+            //MenuPanel.SetActive(!MenuPanel.gameObject.activeSelf);
             LevelSelectPanel.SetActive(false);
         }
     }

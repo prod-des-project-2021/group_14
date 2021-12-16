@@ -1,8 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 
 public class TimerController : MonoBehaviour
 {
@@ -10,28 +10,31 @@ public class TimerController : MonoBehaviour
 
     public Text timeCounter;
 
-
     private TimeSpan timePlaying;
     private bool timerGoing;
-
 
     private float elapsedTime;
 
     private void Awake()
     {
         instance = this;
-    }
 
+        Debug.Log("TimerController");
+    }
 
     private void Start()
     {
-        timeCounter.text = "Time: 00:00:00";
-        timerGoing = false;
-    }
+        timeCounter.text = "Time: 00:00.00";
+        timerGoing = true;
 
+        Debug.Log("Start");
+        
+    }
 
     public void BeginTimer()
     {
+        Debug.Log("BeginTimer");
+
         timerGoing = true;
         elapsedTime = 0f;
 
@@ -54,6 +57,5 @@ public class TimerController : MonoBehaviour
 
             yield return null;
         }
-        
     }
 }

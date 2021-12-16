@@ -785,6 +785,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 687074443900757523, guid: 6219f87c734e9a141bf531ebeb2604a6, type: 3}
   m_PrefabInstance: {fileID: 817338251}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &660968026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 660968028}
+  - component: {fileID: 660968027}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &660968027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660968026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51b7d89d35a32c846a61a243af4d2fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &660968028
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660968026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1026.0951, y: 418.61728, z: 39.335022}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &663747342 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1015275604821095513, guid: 4d4b3e9ab634db3408be6771ccf037db, type: 3}
@@ -2465,6 +2508,7 @@ GameObject:
   - component: {fileID: 1688888961}
   - component: {fileID: 1688888960}
   - component: {fileID: 1688888959}
+  - component: {fileID: 1688888962}
   m_Layer: 5
   m_Name: TimerCounterText
   m_TagString: Untagged
@@ -2533,6 +2577,19 @@ RectTransform:
   m_AnchoredPosition: {x: 431, y: 269}
   m_SizeDelta: {x: 400, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1688888962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688888958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcae7cb7fa5ca44fb314bb18f494b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeCounter: {fileID: 1688888959}
 --- !u!1 &1708333821
 GameObject:
   m_ObjectHideFlags: 0
@@ -3152,6 +3209,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2067412184}
     m_Modifications:
+    - target: {fileID: 2214645213382749437, guid: c02a4b5c544e12745b62b23fb6fc6685, type: 3}
+      propertyPath: m_Text
+      value: Level Selector
+      objectReference: {fileID: 0}
     - target: {fileID: 4554562186477879354, guid: c02a4b5c544e12745b62b23fb6fc6685, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
