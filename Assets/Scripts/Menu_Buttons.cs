@@ -19,7 +19,7 @@ public class Menu_Buttons : MonoBehaviour
     {
         MenuPanel.SetActive(false);
         LevelSelectPanel.SetActive(true);
-        Time.timeScale = 0;
+        
     }
 
 
@@ -40,7 +40,7 @@ public class Menu_Buttons : MonoBehaviour
     if(Input.GetKeyDown(KeyCode.Escape))
         {
             MenuPanel.SetActive(!MenuPanel.gameObject.activeSelf);
-            LevelSelectPanel.SetActive(false);
+            LevelSelectPanel.SetActive(false);    
         }
     }
 }

@@ -34,7 +34,14 @@ public class CameraMove : MonoBehaviour
         TargetRotation = Quaternion.Euler(targetEuler);
         
         transform.rotation = Quaternion.Slerp(transform.rotation, TargetRotation, 
-            Time.deltaTime * 15.0f);  
+            Time.deltaTime * 15.0f);
+
+
+            if(Input.GetKeyDown(KeyCode.Escape))
+               {
+                   Cursor.lockState = CursorLockMode.None;
+               }
+            
     }
 
 

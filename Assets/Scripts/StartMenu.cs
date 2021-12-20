@@ -12,11 +12,18 @@ public class StartMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex-1);
+
+        Debug.Log(TimerController.TotalTime);
+    }
+
+    public void Awake()
+    {
+        GetTime();
     }
 
     public void GetTime()
     {
-        string totalTime = TimerController.timePlayingStr;
-        timerText.text = totalTime;
+        string time = TimerController.TotalTime;
+        timerText.text = time;
     }
 }

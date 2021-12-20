@@ -11,9 +11,11 @@ public class TimerController : MonoBehaviour
     public static string timePlayingStr;
     public Text timeCounter;
 
+    public static string TotalTime = "00:00:00";
+
     public TimeSpan timePlaying;
     public bool timerGoing;
-
+        
     public float elapsedTime;
 
     public void Awake()
@@ -27,8 +29,6 @@ public class TimerController : MonoBehaviour
     {
         timeCounter.text = "Time: 00:00.00";
         timerGoing = true;
-        
-
         
 
         Debug.Log("Start");
@@ -58,6 +58,7 @@ public class TimerController : MonoBehaviour
             timePlaying = TimeSpan.FromSeconds(elapsedTime);
             timePlayingStr = "Time: " + timePlaying.ToString("mm':'ss'.'ff");
             timeCounter.text = timePlayingStr;
+            TotalTime = timePlayingStr;
             yield return null;
         }
     }
