@@ -8,24 +8,28 @@ public class TimerController : MonoBehaviour
 {
     public static TimerController instance;
 
+    public static string timePlayingStr;
     public Text timeCounter;
 
-    private TimeSpan timePlaying;
-    private bool timerGoing;
+    public TimeSpan timePlaying;
+    public bool timerGoing;
 
-    private float elapsedTime;
+    public float elapsedTime;
 
-    private void Awake()
+    public void Awake()
     {
         instance = this;
 
         Debug.Log("TimerController");
     }
 
-    private void Start()
+    public void Start()
     {
         timeCounter.text = "Time: 00:00.00";
         timerGoing = true;
+        
+
+        
 
         Debug.Log("Start");
         
@@ -46,15 +50,14 @@ public class TimerController : MonoBehaviour
         timerGoing = false;
     }
 
-    private IEnumerator UpdateTimer()
+    public IEnumerator UpdateTimer()
     {
         while (timerGoing)
         {
             elapsedTime += Time.deltaTime;
             timePlaying = TimeSpan.FromSeconds(elapsedTime);
-            string timePlayingStr = "Time: " + timePlaying.ToString("mm':'ss'.'ff");
+            timePlayingStr = "Time: " + timePlaying.ToString("mm':'ss'.'ff");
             timeCounter.text = timePlayingStr;
-
             yield return null;
         }
     }
